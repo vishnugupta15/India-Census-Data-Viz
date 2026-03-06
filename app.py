@@ -18,7 +18,7 @@ plot = st.sidebar.button('Plot Graph')
 if plot:
     if selected_state == 'Whole India':
         fig = px.scatter_mapbox(df,lat ="Latitude",lon="Longitude",size = primary,color=secondary,zoom=4,mapbox_style="carto-positron",size_max=30,width=1200,height=700,hover_name='District')
-        st.plotly_chart(fig,use_container_width=True)
+        st.plotly_chart(fig)
     else:
         
         state_df = df[df['State']==selected_state]
